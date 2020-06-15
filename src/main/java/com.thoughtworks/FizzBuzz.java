@@ -12,7 +12,7 @@ public class FizzBuzz {
 
     public String say(int number) {
 
-        if(isContainBy3(number)){
+        if(isContainByNum(number,FizzNumber)){
             return FIZZ;
         }
 
@@ -39,14 +39,11 @@ public class FizzBuzz {
             return WHIZZ;
         }
 
-        if(isContainBy3(number)){
-            return FIZZ;
-        }
         return String.valueOf(number);
     }
 
-    private boolean isContainBy3(int num) {
-        return String.valueOf(num).contains(String.valueOf(FizzNumber));
+    private boolean isContainByNum(int number,int num) {
+        return String.valueOf(number).contains(String.valueOf(FizzNumber));
     }
     private boolean isDividedByNum(int dividend,int divisor){
         if (dividend % divisor == 0) {

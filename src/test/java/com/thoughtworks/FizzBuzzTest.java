@@ -108,4 +108,5 @@ public class FizzBuzzTest {
         //then
         Assert.assertEquals("Fizz",result);
     }
+
 }
