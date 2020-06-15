@@ -14,23 +14,23 @@ public class FizzBuzz {
         if(isContainByNum(number,FizzNumber)&&!isContainByNum(number,BuzzNumber)){
             return FIZZ;
         }
-        if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)&&!isContainByNum(number,BuzzNumber)){
+        if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)&&!isContainByNum(number,BuzzNumber)&&!isContainByNum(number,BuzzNumber)){
             return FIZZ+BUZZ+WHIZZ;
         }
-        if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)&&!isContainByNum(number,BuzzNumber)){
+        if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)&&!isContainByNum(number,BuzzNumber)&&!isContainByNum(number,WhizzNumber)){
           return FIZZ+BUZZ;
         }
         if (isDividedByNum(number,WhizzNumber)&&isDividedByNum(number,FizzNumber)&&!isContainByNum(number,BuzzNumber)){
             return FIZZ+WHIZZ;
         }
-        if (isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)){
+        if (isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)&&!isContainByNum(number,WhizzNumber)){
             return BUZZ+WHIZZ;
         }
 
-         if (isDividedByNum(number,FizzNumber)&&!isContainByNum(number,BuzzNumber)){
+         if (isDividedByNum(number,FizzNumber)&&(!isContainByNum(number,BuzzNumber)||isContainByNum(number,WhizzNumber))){
             return FIZZ;
         }
-        if (isDividedByNum(number,BuzzNumber)){
+        if (isDividedByNum(number,BuzzNumber)&&!isContainByNum(number,WhizzNumber)){
             return BUZZ;
         }
         if (isDividedByNum(number,WhizzNumber)){
