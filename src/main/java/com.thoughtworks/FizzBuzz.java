@@ -12,6 +12,9 @@ public class FizzBuzz {
 
     public String say(int number) {
 
+        if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)){
+            return FIZZ+BUZZ+WHIZZ;
+        }
         if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)){
           return FIZZ+BUZZ;
         }
@@ -21,6 +24,7 @@ public class FizzBuzz {
         if (isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)){
             return BUZZ+WHIZZ;
         }
+
          if (isDividedByNum(number,FizzNumber)){
             return FIZZ;
         }
