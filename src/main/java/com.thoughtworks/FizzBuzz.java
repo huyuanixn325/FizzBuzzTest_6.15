@@ -18,6 +18,9 @@ public class FizzBuzz {
         if (isDividedByNum(number,WhizzNumber)&&isDividedByNum(number,FizzNumber)){
             return FIZZ+WHIZZ;
         }
+        if (isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)){
+            return BUZZ+WHIZZ;
+        }
          if (isDividedByNum(number,FizzNumber)){
             return FIZZ;
         }
