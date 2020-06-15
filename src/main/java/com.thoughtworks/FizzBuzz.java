@@ -11,25 +11,23 @@ public class FizzBuzz {
 
 
     public String say(int number) {
-
-        if(isContainByNum(number,FizzNumber)){
+        if(isContainByNum(number,FizzNumber)&&!isContainByNum(number,BuzzNumber)){
             return FIZZ;
         }
-
-        if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)){
+        if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)&&!isContainByNum(number,BuzzNumber)){
             return FIZZ+BUZZ+WHIZZ;
         }
-        if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)){
+        if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)&&!isContainByNum(number,BuzzNumber)){
           return FIZZ+BUZZ;
         }
-        if (isDividedByNum(number,WhizzNumber)&&isDividedByNum(number,FizzNumber)){
+        if (isDividedByNum(number,WhizzNumber)&&isDividedByNum(number,FizzNumber)&&!isContainByNum(number,BuzzNumber)){
             return FIZZ+WHIZZ;
         }
         if (isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)){
             return BUZZ+WHIZZ;
         }
 
-         if (isDividedByNum(number,FizzNumber)){
+         if (isDividedByNum(number,FizzNumber)&&!isContainByNum(number,BuzzNumber)){
             return FIZZ;
         }
         if (isDividedByNum(number,BuzzNumber)){
@@ -43,7 +41,7 @@ public class FizzBuzz {
     }
 
     private boolean isContainByNum(int number,int num) {
-        return String.valueOf(number).contains(String.valueOf(FizzNumber));
+        return String.valueOf(number).contains(String.valueOf(num));
     }
     private boolean isDividedByNum(int dividend,int divisor){
         if (dividend % divisor == 0) {
