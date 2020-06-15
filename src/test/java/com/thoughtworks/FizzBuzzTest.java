@@ -167,7 +167,7 @@ public class FizzBuzzTest {
     public void should_return_Fizz_when_input_75(){
         //given
         FizzBuzz fizzBuzz = new FizzBuzz();
-        int number = 753;
+        int number = 75;
         //when
         String result = fizzBuzz.say(number);
         //then
