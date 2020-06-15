@@ -58,7 +58,16 @@ public class FizzBuzzTest {
         //then
         Assert.assertEquals("Whizz",result);
     }
-
+    @Test
+    public void should_return_Whizz_when_input_21(){
+        //given
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 21;
+        //when
+        String result = fizzBuzz.say(number);
+        //then
+        Assert.assertEquals("FizzWhizz",result);
+    }
     @Test
     public void should_return_Fizz_when_input_13(){
         //given
