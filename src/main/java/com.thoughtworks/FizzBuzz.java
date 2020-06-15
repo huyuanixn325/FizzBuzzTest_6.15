@@ -2,9 +2,10 @@ package com.thoughtworks;
 
 public class FizzBuzz {
     public String say(int number) {
-        boolean isDividedBy3 = number % 3 == 0;
-        if (isDividedBy3){
+        if (number % 3 == 0){
             return "Fizz";
+        }else if (number % 5 == 0){
+            return "Buzz";
         }
         return String.valueOf(number);
     }
