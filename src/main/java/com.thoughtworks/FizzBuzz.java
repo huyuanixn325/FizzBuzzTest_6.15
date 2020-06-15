@@ -5,20 +5,21 @@ public class FizzBuzz {
     public static final String FIZZ = "Fizz";
     public static final String BUZZ = "Buzz";
     public static final String WHIZZ = "Whizz";
-    public static final String CharacterConstantBy3 = "3";
+    public static final int FizzNumber = 3;
+    public static final int BuzzNumber = 5;
+    public static final int WhizzNumber = 7;
+
 
     public String say(int number) {
-        boolean isDividedBy3 = number % 3 == 0;
-        boolean isDividedBy5 = number % 5 == 0;
-        boolean isDivideBy7 = number % 7 == 0;
-        if (isDividedBy3&&isDividedBy5){
+
+        if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)){
           return FIZZ+BUZZ;
         }
-        else if (isDividedBy3){
+        else if (isDividedByNum(number,FizzNumber)){
             return FIZZ;
-        }else if (isDividedBy5){
+        }else if (isDividedByNum(number,BuzzNumber)){
             return BUZZ;
-        }else if (isDivideBy7){
+        }else if (isDividedByNum(number,WhizzNumber)){
             return WHIZZ;
         }else if(isContainBy3(number)){
             return FIZZ;
@@ -27,6 +28,10 @@ public class FizzBuzz {
     }
 
     private boolean isContainBy3(int num) {
-        return String.valueOf(num).contains(CharacterConstantBy3);
+        return String.valueOf(num).contains(String.valueOf(FizzNumber));
+    }
+    private boolean isDividedByNum(int dividend,int divisor){
+        if (dividend % divisor == 0) return true;
+        return false;
     }
 }
