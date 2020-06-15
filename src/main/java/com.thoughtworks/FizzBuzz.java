@@ -12,6 +12,10 @@ public class FizzBuzz {
 
     public String say(int number) {
 
+        if(isContainBy3(number)){
+            return FIZZ;
+        }
+
         if (isDividedByNum(number,FizzNumber)&&isDividedByNum(number,BuzzNumber)&&isDividedByNum(number,WhizzNumber)){
             return FIZZ+BUZZ+WHIZZ;
         }
